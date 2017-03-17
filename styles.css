@@ -1,0 +1,145 @@
+body {
+  display: flex;
+  background: lightgrey;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  justify-content: space-around;
+  animation: rainbow-background 6s infinite;
+}
+
+h1 {
+  animation: circle 5s linear infinite;
+  text-align: center;
+
+  color: grey;
+  transform text-shadow 3s ease-in-out;
+  text-shadow: 0 0 white;
+}
+
+a {
+    animation: rainbow-text 6s infinite;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(-90deg);
+    transform-origin: 50% -1800px;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: 50% -1800px;
+    font-weight: bold;
+    color: red;
+  }
+  100% {
+    transform: rotate(90deg);
+    transform-origin: 50% -1800px;
+  }
+}
+
+@keyframes cardmove {
+  to {
+      text-shadow: 0 0 rgba(255,255,255,0), -45px -45px 0 red, -30px -30px 0 orange, -15px -15px 0 yellow, 0 0 0 green, 15px 15px 0 blue, 30px 30px 0 indigo, 45px 45px 0 violet;
+  }
+}
+
+@keyframes rainbow-text {
+  0% {  color: blue;  }
+  14% {  color: azure;  }
+  28% {  color: violet;  }
+  42% {  color: white;  }
+  56% {  color: red;  }
+  70% {  color: orange; }
+  86% {  color: yellow; }
+  100% {  color: green; }
+}
+
+
+@keyframes rainbow-background {
+  0% {  background: red;  }
+  14% {  background: orange;  }
+  28% {  background: yellow;  }
+  42% {  background: green; }
+  56% {  background: blue;  }
+  70% {  background: azure; }
+  86% {  background: violet;  }
+  100% {  background: white;  }
+}
+
+hr {
+  margin-top: 3vh;
+  border: 0;
+  border-top: 1px solid lightgrey;
+}
+
+input[type=text] {
+  transition: all .3s ease-in-out;
+  outline: none;
+  width: 80%;
+  padding: 1.5vh 2vw;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+  border-radius: 3px;
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+  padding: 1.5vh 2vw;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+  border-radius: 3px;
+}
+
+.drop {
+  text-decoration: none;
+  color: lightblue;
+  position: relative;
+  top: 3vh;
+}
+
+.drop:hover {
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.card {
+  position: relative;
+  top: 120px;
+  width: 25vw;
+  border: 1px solid grey;
+  padding: 2.5vw;
+  border-radius: 3px;
+  background: white;
+  animation: rainbow-background 6s 2s infinite;
+  transform: perspective(200px) rotateX(40deg);
+}
+
+.card:hover {
+    animation: cardmove 1s infinite linear alternate;
+}
+
+.btn {
+  margin: 1vh;
+  padding: 1vw 2vw;
+  background-color: lightgrey;
+  border-radius: 4px;
+  float: right;
+  color: black;
+  text-align: center;
+}
+
+.blue {
+  transition: background .1s ease-in;
+  background: lightblue;
+  color: white;
+  width: 40%;
+}
+
+.blue:hover {
+  background: teal;
+}
